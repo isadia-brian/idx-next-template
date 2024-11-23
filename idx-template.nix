@@ -2,7 +2,7 @@
 , packageManager ? "npm", srcDir ? false, eslint ? false, app ? false
 , tailwind ? false, ... }: {
 
-  packages = [ pkgs.nodejs_20 pkgs.yarn pkgs.pnpm ];
+  packages = [ pkgs.nodejs_20 pkgs.nodePackages.pnpm ];
 
   bootstrap = ''
     mkdir -p "$WS_NAME"

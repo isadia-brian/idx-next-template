@@ -4,7 +4,7 @@
   # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.nodejs_20
-    pkgs.pnpm
+    pkgs.nodePackages.pnpm
   ];
   # Sets environment variables in the workspace
   env = {};
@@ -16,7 +16,7 @@
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
-        npm-install = "npm ci --no-audit --prefer-offline --no-progress --timing";
+        npm-install = "npm ci --no-audit --no-progress --timing";
       };
       # To run something each time the workspace is (re)started, use the `onStart` hook
     };
